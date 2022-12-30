@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import ShoeItem from './shoeItem'
 
+
 export default class ShoeList extends Component {
-  renderShoe=()=>{
-    const {shoeList}=this.props;    
+  renderShoe=()=>{   
+    const {getShoe,getDetail,shoeList}=this.props;  
     return (
       shoeList.map((shoe)=>{
-        return <ShoeItem key={shoe.id} shoe={shoe}/>
+        return <ShoeItem key={shoe.id} shoe={shoe} getDetail={getDetail} getShoe={getShoe}/>
       })
-    )
+    );
   }
   render() {  
     return (

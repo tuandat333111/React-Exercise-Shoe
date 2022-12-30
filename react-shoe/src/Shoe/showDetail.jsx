@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-export default class Modal extends Component {
+export default class ShowDetail extends Component {
   render() {
-    const {shoe}=this.props;
+    const {detail}=this.props;      
     return (
         <>        
-            <div className="modal fade" id="modelId" tabIndex={-1} role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div className="modal fade" id="modelId" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
             <div className="modal-dialog modal-xl" role="document">
             <div className="modal-content">
                 <div className="modal-header">
@@ -19,20 +19,20 @@ export default class Modal extends Component {
                         <tbody>
                             <tr>
                                 <th>Name</th>
-                                <td>{shoe.name}</td>
+                                <td>{detail.name}</td>
                             </tr>
                             <tr>
                                 <th>Price</th>
-                                <td>{shoe.price}$</td>
+                                <td>{detail.price}$</td>
                             </tr>
                             <tr>
                                 <th>Description</th>
-                                <td>{shoe.description}</td>
+                                <td>{detail.description}</td>
                             </tr>
                             <tr>
                                 <th>Image</th>
                                 <td className='d-flex justify-content-center'>
-                                    <img src={shoe.image}/>
+                                    <img src={detail.image}/>
                                 </td>
                             </tr>
                         </tbody>
